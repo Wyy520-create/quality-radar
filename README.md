@@ -42,6 +42,13 @@ Quality Radar 是一个面向研发与测试协作的本地质量平台。它不
 3. **变更风险**：粘贴已有示例 diff，查看评分因素和推荐的支付契约回归。
 4. **质量门禁**：将最近一次执行与当前风险评估合并为 `PASSED / FAILED` 结论，并展示具体违规项。
 
+## 运行界面
+
+Docker Compose 启动后（`http://localhost:4170`）的实际运行效果，截图随仓库版本管理（`docs/screenshots/`）：
+
+<img src="docs/screenshots/overview.jpeg" alt="质量概览 · 通过率趋势与失败指纹" width="49%" /> <img src="docs/screenshots/import.jpeg" alt="报告导入 · JUnit XML 安全解析" width="49%" />
+<img src="docs/screenshots/risk.jpeg" alt="变更风险 · 可解释评分明细与最小回归推荐" width="49%" /> <img src="docs/screenshots/gate.jpeg" alt="质量门禁 · 阻断发布与具体违规原因" width="49%" />
+
 ## Docker 一键运行（推荐）
 
 ### 前置条件
