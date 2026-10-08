@@ -1,0 +1,47 @@
+name: CI
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  backend-test:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: backend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '21', cache: maven }
+      - run: mvn -B test
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: frontend } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: npm, cache-dependency-path: frontend/package-lock.json }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  compose-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 启动确定性演示环境
+        run: docker compose up -d --build --wait
+      - name: 导入静态报告并验证质量洞察
+        run: |
+          curl -fsS -F report=@demo/sample-junit.xml -F branch=main \
+            http://localhost:4170/api/v1/projects/00000000-0000-0000-0000-000000000001/test-runs:import \
+            | python3 -c "import json,sys; x=json.load(sys.stdin); assert (x['total'],x['passed'],x['failed'],x['errored'])==(4,3,1,0)"
+      - name: 验证确定性风险规则
+        run: |
+          curl -fsS -X POST http://localhost:4170/api/v1/projects/00000000-0000-0000-0000-000000000001/risk-assessments \
+            -H 'Content-Type: application/json' -d '{"diff":"+++ b/src/payment/PaymentService.java\n+public void capture() {}\n"}' \
+            | python3 -c "import json,sys; x=json.load(sys.stdin); assert x['score']==23 and x['level']=='LOW' and x['recommendations'][0]['testKey']=='payment-contract'"
+      - name: 失败时输出容器日志
+        if: failure()
+        run: docker compose logs --tail=120

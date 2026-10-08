@@ -1,0 +1,15 @@
+# Java
+backend/target/
+backend/.mvn/
+*.class
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE / runtime
+.idea/
+.vscode/
+.env
+*.log
+.DS_Store
