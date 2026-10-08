@@ -1,21 +1,60 @@
-MIT License
+版权所有 (c) 2026 余阳辉（Yu Yanghui）。保留所有权利。
 
-Copyright (c) 2026 余阳辉
+================================================================
+【协议性质】
+================================================================
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+本项目为源码公开（Source Available）项目，并非开源（Open Source）项目。
+源码公开可见不等于作者放弃任何权利；未经作者书面授权，
+任何人均不得行使本声明所限制的权利。
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+================================================================
+一、使用声明
+================================================================
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. 本项目（包括全部源代码、文档、界面设计、演示数据与脚本，
+   下称"本项目"）仅供个人学习、研究与非商业性技术交流使用。
+2. 禁止将本项目或其修改版本用于任何商业目的，包括但不限于：
+   (1) 直接用于营利性产品或服务；
+   (2) 嵌入、集成到任何商用软件、SaaS 或商业交付物中；
+   (3) 作为商业培训、付费课程、付费社群等收费内容的配套材料；
+   (4) 以本项目全部或实质部分换取报酬、流量分成或其他经济利益。
+3. 禁止以本项目或其衍生作品申请任何知识产权
+   （著作权、专利、商标），禁止对本项目进行再许可（sublicense）。
+
+================================================================
+二、转发与引用声明
+================================================================
+
+1. 未经作者书面许可，不得将本项目整体或其实质性部分复制、转载、
+   镜像、发布至任何其他代码托管平台、网站或介质。
+2. 经允许的引用或转载，必须显著保留本版权声明与原作者署名
+   "余阳辉"，并注明来源仓库地址：
+   https://github.com/Wyy520-create/quality-radar
+3. 对本项目的介绍、评测、学习笔记不受第 1 条限制，但应注明出处。
+
+================================================================
+三、授权与联系
+================================================================
+
+如需超出上述范围使用、转载或商用，请联系作者获取书面授权：
+
+  GitHub：https://github.com/Wyy520-create
+
+未获书面授权前，任何超出范围的使用均视为未经许可。
+
+================================================================
+四、免责声明
+================================================================
+
+本项目按"现状"（AS IS）提供，不附带任何明示或默示的担保，
+包括但不限于适销性、特定用途适用性与不侵权的担保。作者不对
+任何人因使用或无法使用本项目而产生的任何直接、间接、附带
+或后果性损失承担责任。
+
+================================================================
+五、违约与追责
+================================================================
+
+任何违反本声明的使用、转载或商用行为，作者保留要求停止侵害、
+消除影响、赔偿损失的一切法律权利。
